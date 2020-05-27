@@ -141,75 +141,10 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".csv"
+							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Flight#",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 1
-								}
-							},
-							{
-								"source": {
-									"name": "Origin",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 2
-								}
-							},
-							{
-								"source": {
-									"name": "Dest",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 3
-								}
-							},
-							{
-								"source": {
-									"name": "FlightDate",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 4
-								}
-							},
-							{
-								"source": {
-									"name": "NoSalesReason",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 5
-								}
-							},
-							{
-								"source": {
-									"name": "TransmittingFlightAttd",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 6
-								}
-							}
-						]
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
@@ -219,7 +154,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "csv_file_sink2_ds",
+						"referenceName": "csv_flat_sink2_ds",
 						"type": "DatasetReference"
 					}
 				]
