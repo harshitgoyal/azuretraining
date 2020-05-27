@@ -204,6 +204,15 @@
 								"sink": {
 									"path": "$['Column_5']"
 								}
+							},
+							{
+								"source": {
+									"name": "TransmittingFlightAttd",
+									"type": "String"
+								},
+								"sink": {
+									"path": "$['Column_6']"
+								}
 							}
 						]
 					}
