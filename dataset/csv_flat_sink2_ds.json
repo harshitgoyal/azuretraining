@@ -20,7 +20,7 @@
 		},
 		"schema": [
 			{
-				"name": "Flight#",
+				"name": "Flight",
 				"type": "String"
 			},
 			{
