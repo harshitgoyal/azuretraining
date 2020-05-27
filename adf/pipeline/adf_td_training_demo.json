@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "FullCopy",
+				"name": "FullParCopy1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -112,7 +112,7 @@
 				]
 			},
 			{
-				"name": "flatToJsonCopy",
+				"name": "flatToJsonCopy3",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -144,7 +144,17 @@
 							"quoteAllText": true
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"sink": {
+									"path": "$"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
