@@ -156,17 +156,12 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
-								"sink": {
-									"path": "$"
-								}
-							},
-							{
 								"source": {
 									"name": "Flight#",
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Column_1']"
+									"path": "$['FlightNo']"
 								}
 							},
 							{
@@ -175,7 +170,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Column_2']"
+									"path": "$['Origin']"
 								}
 							},
 							{
@@ -184,7 +179,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Column_3']"
+									"path": "$['Dest']"
 								}
 							},
 							{
@@ -193,7 +188,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Column_4']"
+									"path": "$['FlightDate']"
 								}
 							},
 							{
@@ -202,7 +197,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Column_5']"
+									"path": "$['noSalesReason']"
 								}
 							},
 							{
@@ -211,7 +206,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Column_6']"
+									"path": "$['TransmittingFlightAttd']"
 								}
 							}
 						]
