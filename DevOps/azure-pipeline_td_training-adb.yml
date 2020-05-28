@@ -1,0 +1,27 @@
+#Build notebooks pipeline
+
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - ADB/notebooks/Users/*
+
+pool:
+  name: Admin-Prod
+  demands:
+    - Agent.OS -equals Windows_NT
+
+steps:
+- script: |
+    mkdir -p $(Build.ArtifactStagingDirectory)\tdtrain
+    xcopy "$(Build.SourcesDirectory)\ADB\notebooks\Users" "$(Build.ArtifactStagingDirectory)\tdtrain" /s /e /y
+  workingDirectory: $(Build.ArtifactStagingDirectory)
+  displayName: 'Prepare Notebook Build Artifacts tdtrain'
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish tdtrain Notebook Artifacts
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)\rim00'
+    artifactName: tdtrain-adb-notebooks
